@@ -3,20 +3,20 @@
 default: &default
   adapter: postgresql
   encoding: unicode
-  pool: 25
+  pool: 5
   host: localhost
   port: 5432
-  username: bruno
-  password: '[ 09 osbruno ]'
+  username: user
+  password: 'pwd'
 
 development:
   <<: *default
-  database: cold_db_development
+  database: db_development
 
 production:
   <<: *default
-  database: cold_db_production
+  database: db_production
 
 test:
   <<: *default
-  database: cold_db_test<%= ENV['TEST_ENV_NUMBER'] %>
+  database: db_test<%= ENV['TEST_ENV_NUMBER'] %>

@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  longitude: 9.99
+  latitude: 9.99
+  person_id: 
+
+two:
+  longitude: 9.99
+  latitude: 9.99
+  person_id: 
