@@ -1,4 +1,4 @@
-# Rename this file to just database.yml, and configure as you need!
+# Rename this file to just database.yml, and configure as you need! (localhost)
 
 default: &default
   adapter: postgresql
@@ -12,10 +12,6 @@ default: &default
 development:
   <<: *default
   database: db_development
-
-production:
-  <<: *default
-  database: db_production
 
 test:
   <<: *default
