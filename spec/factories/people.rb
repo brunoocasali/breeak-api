@@ -1,12 +1,12 @@
 FactoryGirl.define do
   factory :person do
-    bio "MyString"
-birthday_at "2015-05-31"
-email "MyString"
-location nil
-name "MyString"
-status nil
-fb_access_token "MyString"
-  end
+    bio { Forgery(:lorem_ipsum).text }
+    name { Forgery(:name).full_name }
+    email { Forgery(:email).address }
+    birthday_at { Forgery(:date).date }
+    fb_access_token { Forgery(:basic).encrypt }
 
+    location
+    status
+  end
 end
