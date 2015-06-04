@@ -1,5 +1,5 @@
 class PersonSerializer < ActiveModel::Serializer
-  attributes :id, :bio, :birthday_at, :email, :tags, :name, :fb_access_token,
+  attributes :id, :name, :email, :bio, :birthday_at, :fb_access_token, :tags,
              :location, :status
 
   def location
