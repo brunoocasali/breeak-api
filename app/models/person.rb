@@ -1,4 +1,6 @@
 class Person < ActiveRecord::Base
-  has_one :location
-  has_one :status
+  belongs_to :location
+  belongs_to :status
+
+  validates :name, presence: true
 end
