@@ -17,18 +17,18 @@ module Api
         @location = Location.new(location_params)
         @location.save
 
-        respond_with @location
+        respond_with :api, :v1, @location
       end
 
       def update
         @location.update(location_params)
 
-        respond_with @location
+        respond_with :api, :v1, @location
       end
 
       def destroy
         @location.destroy
-        respond_with @location
+        respond_with :api, :v1, @location
       end
 
       private
