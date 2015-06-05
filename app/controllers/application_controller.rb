@@ -1,3 +1,6 @@
 class ApplicationController < ActionController::API
-  # respond_to :json
+  include ActionController::ImplicitRender
+  include ActionController::Serialization
+
+  respond_to :json
 end
