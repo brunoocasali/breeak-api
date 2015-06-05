@@ -1,7 +1,7 @@
 FactoryGirl.define do
   factory :location do
-    latitude { Forgery(:geo).latitude }
-    longitude { Forgery(:geo).longitude }
+    latitude { Forgery(:geo).latitude.round(6) }
+    longitude { Forgery(:geo).longitude.round(6) }
   end
 
   factory :invalid_location, parent: :location do

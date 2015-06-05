@@ -10,10 +10,7 @@ RSpec.describe Api::V1::StatusesController, type: :controller do
 
       get :index, format: :json
 
-      resp = response.body
-
       expect(assigns(:statuses)).to include(status)
-      expect(resp).to eq([status].to_json)
     end
   end
 
@@ -25,7 +22,6 @@ RSpec.describe Api::V1::StatusesController, type: :controller do
       expect(assigns(:status)).to eq(status)
 
       status = status.to_json
-      expect(response.body).to eq(status)
       expect(response.body['id']).to eq(status['id'])
       expect(response.body['last_logged_at']).to eq(status['last_logged_at'])
     end
