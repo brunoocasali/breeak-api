@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  scope defaults: { format: :json } do
+    root 'welcome#index'
+
+    get 'welcome', action: :index, controller: :welcome
+  end
 
   namespace :api, defaults: { format: :json } do
     namespace :v1, except: [:new, :edit] do
@@ -7,5 +12,4 @@ Rails.application.routes.draw do
       resources :statuses
     end
   end
-
 end
