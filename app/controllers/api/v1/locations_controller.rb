@@ -38,7 +38,7 @@ module Api
       end
 
       def location_params
-        params.require(:location).permit(:longitude, :latitude)
+        params.require(:location).permit(:longitude, :latitude, :person_id)
       end
     end
   end

@@ -36,7 +36,7 @@ module Api
       end
 
       def status_params
-        params.require(:status).permit(:last_logged_at)
+        params.require(:status).permit(:last_logged_at, :person_id)
       end
     end
   end
