@@ -39,10 +39,8 @@ module Api
       end
 
       def person_params
-        params.require(:person).permit :bio, :name, :email, :birthday_at,
-                                       :fb_access_token, tags: []
-
-
+        params.require(:person).permit :bio, :name, :email, :birthday_at, :phone,
+                                       :image, :fb_access_token, tags: []
       end
     end
   end

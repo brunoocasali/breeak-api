@@ -19,4 +19,24 @@ RSpec.describe Person, type: :model do
 
     it { is_expected.to have_db_column(:tags).of_type(:text).with_options(default: {}) }
   end
+
+  context 'validations specific cases' do
+    it 'needs to raise an phone and email error' do
+      expect {
+        create(:person, email: nil, phone: nil)
+      }.to raise_error
+    end
+
+    it 'needs to allow save with only the email' do
+      expect {
+        create(:person, email: 'brunoocasali@gmail.com', phone: nil)
+      }.to change(Person, :count).by(1)
+    end
+
+    it 'needs to allow save with only the phone' do
+      expect {
+        create(:person, email: nil, phone: '46 99163882')
+      }.to change(Person, :count).by(1)
+    end
+  end
 end

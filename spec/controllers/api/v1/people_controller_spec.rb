@@ -28,6 +28,8 @@ RSpec.describe Api::V1::PeopleController, type: :controller do
       expect(response.body['location']['longitude']).to eq(person['location']['longitude'])
       expect(response.body['email']).to eq(person['email'])
       expect(response.body['bio']).to eq(person['bio'])
+      expect(response.body['phone']).to eq(person['phone'])
+      expect(response.body['image']).to eq(person['image'])
       expect(response.body['name']).to eq(person['name'])
       expect(response.body['birthday_at']).to eq(person['birthday_at'])
     end

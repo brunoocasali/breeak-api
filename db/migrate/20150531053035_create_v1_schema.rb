@@ -3,13 +3,18 @@ class CreateV1Schema < ActiveRecord::Migration
     create_table :people do |t|
       t.string :bio
       t.date :birthday_at
-      t.string :email
+      t.string :email, null: true
+      t.string :phone, null: true
+      t.string :image
       t.string :name
       t.string :fb_access_token
       t.text :tags, array: true, default: []
 
       t.timestamps null: false
     end
+
+    add_index :people, :email, unique: true
+    add_index :people, :phone, unique: true
 
     create_table :locations do |t|
       t.decimal :longitude, precision: 10, scale: 6

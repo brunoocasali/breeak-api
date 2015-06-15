@@ -5,9 +5,7 @@ class WelcomeController < ApplicationController
         { name: 'ColdAPI',
           for: 'QuebraGelo',
           current_version: { version: 'v1', codename: 'Apollo'},
-          who: [{ name: 'Bruno Casali', contact: '@brunoocasali' },
-                { name: 'Alan Darold', contact: '' },
-                { name: 'João Vanin', contact: '' }],
+          who: [{ name: 'Bruno Casali', contact: '@brunoocasali' }],
           start:
               {
                   docs: 'no docs, for while',
