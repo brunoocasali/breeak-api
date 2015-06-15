@@ -1,6 +1,6 @@
 class PersonSerializer < ActiveModel::Serializer
-  attributes :id, :name, :email, :bio, :birthday_at, :fb_access_token, :tags,
-             :location, :status
+  attributes :id, :name, :email, :phone, :bio, :birthday_at, :fb_access_token,
+             :tags, :location, :status, :image
 
   def location
     LocationSerializer.new(object.location, scope: scope, root: false)
