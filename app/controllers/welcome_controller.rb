@@ -9,7 +9,8 @@ class WelcomeController < ApplicationController
             for: 'QuebraGelo',
             current_version: {
                 version: 'v1',
-                codename: 'Apollo'
+                codename: 'Apollo',
+                status: 'development'
             },
             who: [{ name: 'Bruno Casali', contact: '@brunoocasali' }],
             start:
