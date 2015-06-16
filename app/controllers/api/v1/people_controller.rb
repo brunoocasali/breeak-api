@@ -32,6 +32,12 @@ module Api
         respond_with :api, :v1, @person
       end
 
+      def find_by
+        @person = Person.find_by(params[:hash])
+
+        respond_with(@person)
+      end
+
       private
 
       def set_person

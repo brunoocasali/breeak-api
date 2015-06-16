@@ -8,7 +8,10 @@ Rails.application.routes.draw do
   namespace :api, defaults: { format: :json } do
     namespace :v1, except: [:new, :edit] do
       resources :locations
-      resources :people
+      resources :people do
+        get :find_by, on: :collection
+      end
+
       resources :statuses
     end
   end
