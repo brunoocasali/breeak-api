@@ -74,8 +74,8 @@ RSpec.describe Api::V1::LocationsController, type: :controller do
         put :update, id: location.to_param, location: new_attributes, format: :json
         location.reload
 
-        expect(location.latitude).to eq(new_attributes[:latitude])
-        expect(location.longitude).to eq(new_attributes[:longitude])
+        expect(location.latitude).to eq(new_attributes[:latitude].to_d)
+        expect(location.longitude).to eq(new_attributes[:longitude].to_d)
         expect(response).to be_success
       end
 
