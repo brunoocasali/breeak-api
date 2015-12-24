@@ -25,7 +25,7 @@ deploy:
     secure: N95AZ1xbcm3TP1HCcyRcU7SNOXDivQ6fSvv50lN1Pr6XqPSHKVkSDf29iLm1feN3s91oGm4uiFkkHl3FSMQKRZuLl7tiigLgGFJiX39VUzbYbJA/HsPg3VkZLU/xnUx3ij1KBsjvwRRYDZwhiectydDjZ55rZpC/4lR3MB9z3YXKVyasQy/dhKYCZBzAN/4VFDpQ8rDHVs80eBNcipU1fsWRxjpcnra2b2z462s7NM5G922EjBc5B/CuiVF+JoGCZazojif/PXQCqHhaMYt2Pm9Pkagew35/zyywSTJuE/SKCmpwe/vhrF+pfuMteRziJjc8tuRb4LvRbP2CQpri+bShplvJRRRTbbtcCk0Ud2zP+ojcf6KvBLmFbppgaa7RRXRvwt/3Lz4C5RFFrlY2RZ6SAt9g3BCtVwMi38M32U9VJkEjxac6Mz/EsI+WhoupiG9BFvqsO31uSC/L/2a7X8Q3IoOLy9xkV5e5llgK8RNgEEEOuvlg/Nog0WpnOG9CRtNCO3eHwVLAZ/fb2qv09P+BfP//sXLATBESuRQ0mWeDjAKzzsj1WOXHYXoHgjGl4IcsSIpWW3HZN/niDmwS6TKc0It+P+c2pyYC8EJiOMRQYo5UOwVEKavMGsewRskiEHr7nH6LpjTrHTeq7vqRwBbDJYqqR7a442CBOpxtCcY=
   app: quebra-gelo
   on:
-    repo: Unisep/quebra-gelo-api
+    repo: Unisep/breeak-api
   run:
      - "rake db:create db:migrate"
      - restart
